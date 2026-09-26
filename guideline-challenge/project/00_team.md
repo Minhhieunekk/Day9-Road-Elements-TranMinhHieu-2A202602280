@@ -2,9 +2,9 @@
 
 Điền trước phút 15. Thay mọi placeholder; còn sót thì `make status` báo ở gate G1.
 
-- **Team:** TODO (ví dụ `team07`)
-- **Nhóm peer test bài của mình:** TODO (cặp A ↔ B; số nhóm lẻ thì ring 3 nhóm A → B → C → A — Lab Coach công bố)
-- **Nhóm mình test bài của:** TODO
+- **Team:** Nhóm 20 (ví dụ `team07`)
+- **Nhóm peer test bài của mình:** Nhóm 6 (cặp đổi bài Nhóm 20 ↔ Nhóm 6)
+- **Nhóm mình test bài của:** Nhóm 6
 - **Problem family:** Traffic sign taxonomy — hierarchical sign taxonomy theo nhóm chức năng pháp lý cho biển nhỏ / xa / bị che
 - **Nguồn ảnh:** `gtsdb` (6 ảnh) + `bdd100k` (6 ảnh) — bộ trao đổi 12 ảnh trong `project/dataraw/traffic_sign_gt/`
 

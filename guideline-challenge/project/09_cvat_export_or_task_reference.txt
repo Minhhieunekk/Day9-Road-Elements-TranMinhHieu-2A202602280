@@ -1,8 +1,8 @@
 CVAT task reference — thay mọi placeholder mới là xong.
 
 CVAT version: 2.74.1 (http://localhost:8080)
-Task calibration (tên, id): TODO
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: TODO
-File export đã nộp (đường dẫn trong repo): project/cvat_annotations/ground_truth_12/ground_truth_12_cvat_for_images_1.1.zip (ground truth 12 ảnh, CVAT for images 1.1); export calibration trong project/06_calibration_exports/; export peer trong project/07_blind_handoff/peer_output/
-Guideline version dán trong Guide của task: TODO
+Task calibration (tên, id): không lưu task calibration riêng; calibration so ground truth 12 ảnh (task nhóm 20, labels 03_cvat_labels.json) với export của nhóm 6 (job 26 trên CVAT của nhóm 6), lọc 4 ảnh calibration: project/06_calibration_exports/nhom20_gold.zip và nhom6.zip
+Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: không tạo task mới — v3 chỉ bổ sung checklist 4.5 và bảng quyết định mục 6, không đổi label/attribute trong 03_cvat_labels.json nên task ground truth hiện tại vẫn dùng được; cần dán lại Guide bằng 02_guideline.md v3
+File export đã nộp (đường dẫn trong repo): project/cvat_annotations/ground_truth_12/ground_truth_12_cvat_for_images_1.1.zip (ground truth 12 ảnh, CVAT for images 1.1); export calibration trong project/06_calibration_exports/; export peer trong project/07_blind_handoff/peer_output/ (peer_nhom6_full12.zip = 12 ảnh, peer_nhom6_blind.zip = 5 ảnh blind)
+Guideline version dán trong Guide của task: v2 (bản gửi nhóm 6 và bản đã freeze); v3 cần dán lại vào Guide
 Ghi chú cho người tiếp nhận: Labels = project/03_cvat_labels.json (một label traffic_sign, 11 attribute). Ảnh trao đổi = project/dataraw/traffic_sign_gt/ (12 ảnh). Tạo task với Sorting method = lexicographical rồi Upload annotations format CVAT 1.1. Chấm export của peer: python project/check_peer_accuracy.py <export>.zip (thêm --only-split blind để chỉ chấm 5 ảnh blind).

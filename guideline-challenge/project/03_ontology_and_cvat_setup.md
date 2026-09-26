@@ -35,8 +35,8 @@ biển có box nhỏ (< 20 px) hoặc `sign_category = unknown` mà vẫn `reada
 ## CVAT
 
 - **Phiên bản CVAT** (`make cvat-status`): 2.74.1 (http://localhost:8080)
-- **Tên task calibration** (có version guideline, ví dụ `team07-calib-v1`): TODO
-- **Guide của task đã dán `02_guideline.md`?** TODO (có / chưa)
+- **Tên task calibration** (có version guideline, ví dụ `team07-calib-v1`): không lưu task calibration riêng — calibration dựa trên bộ ground truth 12 ảnh (`cvat_annotations/ground_truth_12/`) đối chiếu với export của nhóm 6 (xem `06_calibration_report.csv`)
+- **Guide của task đã dán `02_guideline.md`?** có (guideline v2 trong gói gửi nhóm 6)
 - **Nhóm dùng Track hay Shape, vì sao:** Shape — task ảnh tĩnh, mỗi ảnh là một cảnh độc lập, không có object nào
   cần theo qua nhiều frame; không attribute nào `mutable`.
 - **Ground truth để chấm peer:** `cvat_annotations/ground_truth_12/` (12 ảnh trong `dataraw/traffic_sign_gt/`,
@@ -47,4 +47,13 @@ biển có box nhỏ (< 20 px) hoặc `sign_category = unknown` mà vẫn `reada
 Một thành viên **chưa tham gia setup** mở task và trả lời: label gì, dùng tool nào, gán attribute nào, khi nào
 escalate. Ghi lại ai test và chỗ họ vấp:
 
-TODO
+- **Ai test:** nhóm 6 (chưa tham gia setup) tạo task từ `03_cvat_labels.json` + guideline v2, label cả 12 ảnh trao
+  đổi, export `peer.zip` (CVAT for images 1.1).
+- **Label gì / tool nào:** hiểu ngay — một label `traffic_sign`, Rectangle ở chế độ Shape; export không có box sai
+  label hay sai loại shape.
+- **Attribute:** không còn `__undefined__` ở `sign_category`, `sign_type`, `relevance` (0 lỗi trong
+  `check_peer_accuracy.py`). Nhóm 6 phản hồi: 11 attribute dài, lúc đầu nhầm vài attribute vì chưa nắm hết nghĩa.
+- **Khi nào escalate:** các box `needs_review = true` trong export trùng với ground truth (GTS05, BDD01, GTS08 khi
+  không đọc chắc số).
+- **Chỗ vấp:** biển ở xa (10–19 px) không đoán được là biển nào. Đã xử lý ở guideline v3: thêm bảng quyết định cho
+  biển nhỏ/xa và bảng thứ tự điền attribute (xem `08_revision_log.md`).

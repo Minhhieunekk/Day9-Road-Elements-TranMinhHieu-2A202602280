@@ -1,6 +1,6 @@
 # Annotation guideline — Phân loại biển báo giao thông theo cấp bậc (hierarchical sign taxonomy) cho biển nhỏ / xa / bị che
 
-**Version:** v3
+**Version:** v2
 
 > Đọc hết mục 1–7 trước khi vẽ object đầu tiên. Mục 4 (taxonomy) và mục 7 (escalation) là nơi hay sai nhất.
 > Mọi quyết định phải nhìn thấy được trong file export CVAT: box + attribute. Không có "quyết định trong
@@ -152,27 +152,6 @@ chỉ có hiệu lực với dòng xe **nhìn thấy mặt biển**.
   khi xe đang rẽ). Nếu `unclear` **và** `sign_type` là `stop`, `give_way`, `no_entry` hoặc `speed_limit` → bật
   thêm `needs_review` (critical).
 
-### 4.5 Thứ tự điền attribute (checklist cho mỗi box)
-
-Mỗi box có 11 attribute. Điền theo đúng thứ tự dưới đây trong chế độ **Attribute annotation**; 3 attribute đầu bắt
-buộc chọn, các attribute còn lại chỉ đổi khi thấy đúng dấu hiệu ghi ở cột phải.
-
-| Bước | Attribute | Việc cần làm | Chỉ đổi khỏi default khi |
-|---|---|---|---|
-| 1 | `facing` | Nhìn mặt biển trước tiên | Thấy tấm kim loại xám / khung giằng → `back`; nhìn từ cạnh → `edge_on`. Nếu `back`/`edge_on`: điền luôn `unknown / unknown`, `not_ego`, `value_text = -` rồi sang bước 7 |
-| 2 | `sign_category` | Bắt buộc chọn, theo 4.1 | — (default `__undefined__`) |
-| 3 | `sign_type` | Bắt buộc chọn, phải cùng nhóm với bước 2 (4.2) | — (default `__undefined__`) |
-| 4 | `value_text` | Ghi số/chữ quan trọng | Biển có số/chữ; đọc không chắc → `?` |
-| 5 | `relevance` | Bắt buộc chọn, theo 4.4 | — (default `__undefined__`) |
-| 6 | `readability` | Mức đọc được ký hiệu | Mờ/nhoè/nhỏ nhưng vẫn biết loại → `degraded`; không thấy ký hiệu → `illegible` |
-| 7 | `occlusion` | Tỉ lệ bị che | Bị che ≥ 10% |
-| 8 | `truncated` | | Biển chạm mép ảnh |
-| 9 | `mount` | | Trên giá long môn/cần vươn → `overhead`; gắn tường/chân đế tạm → `other` |
-| 10 | `temporary` | | Biển công trường / nền vàng tạm (Đức) / nền cam (Mỹ) |
-| 11 | `needs_review` | Kiểm lần cuối | Rơi vào một trường hợp ESCALATE ở mục 7 (a)–(e) |
-
-Mẹo: bước 6–10 thường giữ default; sai ở đây là lỗi minor. Sai ở bước 1–5 là lỗi major hoặc critical.
-
 ## 5. Inclusion / exclusion
 
 | Tình huống | Quyết định | Thể hiện trong CVAT |
@@ -196,18 +175,6 @@ Mẹo: bước 6–10 thường giữ default; sai ở đây là lỗi minor. Sa
 - **Kích thước:** đo cạnh ngắn của box ở **độ phân giải gốc** (GTSDB 1360×800, BDD 1280×720). 10–19 px: gần như
   luôn `readability = degraded` hoặc `illegible`; được phép xác định `sign_category` từ **hình dạng + màu** (ví dụ tam
   giác viền đỏ → `danger_warning`) nhưng `sign_type` chỉ chọn khi đọc được ký hiệu, nếu không → `other_<nhóm>`.
-- **Bảng quyết định cho biển nhỏ / xa** (đo cạnh ngắn của box ở độ phân giải gốc):
-
-  | Kích thước | Thấy được gì | `sign_category` | `sign_type` | `readability` |
-  |---|---|---|---|---|
-  | < 10 px | bất kỳ | không vẽ box (IGNORE) | — | — |
-  | 10–19 px | thấy rõ ký hiệu/số | theo hình + màu | loại cụ thể | `degraded` |
-  | 10–19 px | chỉ thấy hình dạng + màu | theo hình + màu (bảng 4.1) | `other_<nhóm>` | `degraded` hoặc `illegible` |
-  | 10–19 px | không rõ cả hình dạng/màu | `unknown` | `unknown` | `illegible` |
-  | ≥ 20 px | mờ/nhoè nhưng biết loại | theo 4.1 | loại cụ thể | `degraded` |
-
-  Không đoán loại cụ thể từ hình dạng: thoi vàng xa không thấy mũi tên thì là `danger_warning / other_warning`, không
-  phải `curve`. Ví dụ: BDD04 box 3 và BDD05 box 4 (mục 9.2).
 - **Bị che:** ước lượng % mặt biển bị che → `occlusion`. Box chỉ ôm phần thấy (mục 3). Che 50–90% mà vẫn nhận ra nhóm
   → label bình thường với `heavy`.
 - **Mép ảnh:** `truncated = true`; phân loại theo phần nhìn thấy.
