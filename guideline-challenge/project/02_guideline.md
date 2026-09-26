@@ -1,6 +1,6 @@
 # Annotation guideline — Phân loại biển báo giao thông theo cấp bậc (hierarchical sign taxonomy) cho biển nhỏ / xa / bị che
 
-**Version:** v1
+**Version:** v2
 
 > Đọc hết mục 1–7 trước khi vẽ object đầu tiên. Mục 4 (taxonomy) và mục 7 (escalation) là nơi hay sai nhất.
 > Mọi quyết định phải nhìn thấy được trong file export CVAT: box + attribute. Không có "quyết định trong
@@ -83,15 +83,15 @@ thời gian chọn label.
 
 ### 4.1 Tầng 1 — `sign_category` (bắt buộc chọn, default `__undefined__`)
 
-| Giá trị | Công ước Viên | StVO (Đức) | MUTCD (Mỹ) | QCVN 41 (VN) | Nhận dạng điển hình |
-|---|---|---|---|---|---|
-| `danger_warning` | A | Gefahrzeichen (Z. 101–151) + Z. 625 chevron | Warning (W), nền vàng/cam | W (nguy hiểm và cảnh báo) | Đức/Viên: tam giác đỉnh lên, viền đỏ. Mỹ: **thoi vàng** hoặc chữ nhật vàng; trường học/người đi bộ màu vàng-xanh huỳnh quang |
-| `priority` | B | Z. 205, 206, 301, 306, 307, 308, 208 | R1-1 STOP, R1-2 YIELD | R.122 (Dừng lại), W.208 (Giao nhau với đường ưu tiên), I.401 (Bắt đầu đường ưu tiên)… | Bát giác đỏ STOP; tam giác **đỉnh xuống** (nhường đường); thoi vàng viền trắng (đường ưu tiên, **chỉ ở hệ Viên**); tam giác viền đỏ có mũi tên đen to (ưu tiên ở nút tới) |
-| `prohibitory` | C | Vorschriftzeichen dạng cấm (Z. 250–283, 274, 276, 277…) | Regulatory dạng cấm/giới hạn: SPEED LIMIT, DO NOT ENTER, NO TURN, NO PARKING | P (biển cấm) | Hình tròn **viền đỏ** nền trắng; tròn nền xanh viền đỏ (cấm dừng/đỗ); tròn trắng có vạch chéo đen (hết cấm/hết hạn chế). Mỹ: chữ nhật trắng chữ đen nội dung giới hạn/cấm |
-| `mandatory` | D | Z. 209–222, 237–241 (tròn xanh) | Regulatory bắt buộc: KEEP RIGHT, lane-use ONLY | R (hiệu lệnh) | Hình tròn **nền xanh** ký hiệu trắng |
-| `informative` | E, F, G | Richtzeichen (Z. 306 **trừ**, Z. 310–470, 350, 437…) | Guide (xanh lá/xanh dương/nâu), ONE WAY, street name | I (chỉ dẫn) | Chữ nhật/vuông nền xanh dương, xanh lá, vàng (biển hướng Đức), trắng; biển số đường; biển tên đường; vuông xanh có người đi bộ (Z. 350) |
-| `supplementary_panel` | H | Zusatzzeichen | Plaque (tấm phụ dưới biển chính) | S (biển phụ) | Tấm nhỏ trắng/vàng gắn **ngay dưới** biển chính, ghi khoảng cách, giờ, loại xe, mũi tên |
-| `unknown` | — | — | — | — | Nhìn thấy là biển nhưng không xác định được nhóm (quá nhỏ, mờ, mặt sau, bị che) |
+| Giá trị | Công ước Viên | StVO (Đức) | MUTCD (Mỹ) | Nhận dạng điển hình |
+|---|---|---|---|---|
+| `danger_warning` | A | Gefahrzeichen (Z. 101–151) + Z. 625 chevron | Warning (W), nền vàng/cam | Đức/Viên: tam giác đỉnh lên, viền đỏ. Mỹ: **thoi vàng** hoặc chữ nhật vàng; trường học/người đi bộ màu vàng-xanh huỳnh quang |
+| `priority` | B | Z. 205, 206, 301, 306, 307, 308, 208 | R1-1 STOP, R1-2 YIELD | Bát giác đỏ STOP; tam giác **đỉnh xuống** (nhường đường); thoi vàng viền trắng (đường ưu tiên, **chỉ ở hệ Viên**); tam giác viền đỏ có mũi tên đen to (ưu tiên ở nút tới) |
+| `prohibitory` | C | Vorschriftzeichen dạng cấm (Z. 250–283, 274, 276, 277…) | Regulatory dạng cấm/giới hạn: SPEED LIMIT, DO NOT ENTER, NO TURN, NO PARKING | Hình tròn **viền đỏ** nền trắng; tròn nền xanh viền đỏ (cấm dừng/đỗ); tròn trắng có vạch chéo đen (hết cấm/hết hạn chế). Mỹ: chữ nhật trắng chữ đen nội dung giới hạn/cấm |
+| `mandatory` | D | Z. 209–222, 237–241 (tròn xanh) | Regulatory bắt buộc: KEEP RIGHT, lane-use ONLY | Hình tròn **nền xanh** ký hiệu trắng |
+| `informative` | E, F, G | Richtzeichen (Z. 306 **trừ**, Z. 310–470, 350, 437…) | Guide (xanh lá/xanh dương/nâu), ONE WAY, street name | Chữ nhật/vuông nền xanh dương, xanh lá, vàng (biển hướng Đức), trắng; biển số đường; biển tên đường; vuông xanh có người đi bộ (Z. 350) |
+| `supplementary_panel` | H | Zusatzzeichen | Plaque (tấm phụ dưới biển chính) | Tấm nhỏ trắng/vàng gắn **ngay dưới** biển chính, ghi khoảng cách, giờ, loại xe, mũi tên |
+| `unknown` | — | — | — | Nhìn thấy là biển nhưng không xác định được nhóm (quá nhỏ, mờ, mặt sau, bị che) |
 
 **Quy tắc phân xử tầng 1 (theo thứ tự ưu tiên, dừng ở quy tắc đầu tiên khớp):**
 
@@ -111,13 +111,13 @@ thời gian chọn label.
 `sign_type` **phải thuộc đúng nhóm** của `sign_category` đã chọn (tổ hợp chéo nhóm là lỗi major). Không chắc loại
 cụ thể nhưng chắc nhóm → chọn `other_<nhóm>`. Không chắc cả nhóm → `sign_category = unknown` và `sign_type = unknown`.
 
-| sign_category | sign_type được phép | Ghi chú / ví dụ luật |
+| sign_category | sign_type được phép | Ghi chú |
 |---|---|---|
-| `priority` | `stop` · `give_way` · `priority_road` · `end_priority_road` · `priority_next_junction` · `priority_over_oncoming` · `give_way_to_oncoming` | StVO Z. 206 / MUTCD R1-1 = `stop`; Z. 205 / R1-2 = `give_way`; Z. 306 thoi vàng = `priority_road`; Z. 307 (thoi có vạch đen) = `end_priority_road`; Z. 301 (tam giác mũi tên đen to + vạch ngang) = `priority_next_junction` |
-| `prohibitory` | `speed_limit` · `end_speed_limit` · `no_entry` · `closed_to_all_vehicles` · `no_overtaking` · `no_overtaking_trucks` · `vehicle_type_ban` · `dimension_weight_limit` · `no_turn` · `no_parking` · `no_stopping` · `end_restrictions` · `other_prohibitory` | Z. 274 / R2-1 / QCVN P.127 = `speed_limit`; Z. 267 / R5-1 DO NOT ENTER / P.102 = `no_entry` (tròn đỏ vạch ngang trắng); Z. 250 (tròn trắng viền đỏ trống) = `closed_to_all_vehicles`; Z. 276 = `no_overtaking`; Z. 277 (xe tải đỏ + xe con) = `no_overtaking_trucks`; biển cấm một loại xe (xe tải, xe máy…) = `vehicle_type_ban`; Z. 282 = `end_restrictions` |
-| `mandatory` | `mandatory_direction` · `pass_side` · `roundabout` · `mandatory_path` · `other_mandatory` | Z. 209/211/214 (mũi tên rẽ/đi thẳng) = `mandatory_direction`; Z. 222 (mũi tên chéo xuống, "đi bên phải/trái chướng ngại") / QCVN R.302 = `pass_side`; Z. 215 / R.303 = `roundabout`; đường dành cho xe đạp/người đi bộ (Z. 237/239/240/241) = `mandatory_path` |
-| `danger_warning` | `curve` · `general_danger` · `junction_warning` · `pedestrians_ahead` · `children` · `road_works` · `slippery_snow_ice` · `uneven_road` · `road_narrows` · `traffic_signals_ahead` · `animals` · `chevron_alignment` · `other_warning` | Z. 103/105 (cua đơn/cua kép), MUTCD W1-1…W1-6 = `curve`; Z. 101 (dấu "!") = `general_danger`; Z. 102 (nút giao) = `junction_warning`; Z. 101-51 bông tuyết = `slippery_snow_ice`; Z. 123 = `road_works`; Z. 625 / W1-8 = `chevron_alignment`; biển vàng chữ (END FREEWAY…) = `other_warning` |
-| `informative` | `pedestrian_crossing` · `parking` · `one_way` · `dead_end` · `direction_guide` · `route_number` · `town_entry_exit` · `motorway_expressway` · `street_name` · `bus_stop` · `other_informative` | Z. 350 vuông xanh người đi bộ = `pedestrian_crossing` (**khác** tam giác cảnh báo người đi bộ = `danger_warning/pedestrians_ahead`); Z. 314 "P" = `parking`; biển chỉ hướng đi các nơi, bảng giá long môn, bảng exit = `direction_guide`; số quốc lộ/Bundesstraße (tấm vàng "226") = `route_number`; Z. 437 / MUTCD D3-1 = `street_name` |
+| `priority` | `stop` · `give_way` · `priority_road` · `end_priority_road` · `priority_next_junction` · `priority_over_oncoming` · `give_way_to_oncoming` | Biển bát giác đỏ STOP = `stop`; tam giác đỉnh xuống = `give_way`; thoi vàng viền trắng = `priority_road`; thoi vàng có vạch đen chéo = `end_priority_road`; tam giác viền đỏ có mũi tên đen to = `priority_next_junction` |
+| `prohibitory` | `speed_limit` · `end_speed_limit` · `no_entry` · `closed_to_all_vehicles` · `no_overtaking` · `no_overtaking_trucks` · `vehicle_type_ban` · `dimension_weight_limit` · `no_turn` · `no_parking` · `no_stopping` · `end_restrictions` · `other_prohibitory` | Tròn viền đỏ có số = `speed_limit`; tròn đỏ có vạch ngang trắng (DO NOT ENTER) = `no_entry`; tròn trắng viền đỏ để trống = `closed_to_all_vehicles`; hai xe con cạnh nhau = `no_overtaking`; xe tải đỏ cạnh xe con = `no_overtaking_trucks`; cấm một loại xe (xe tải, xe máy…) = `vehicle_type_ban`; tròn trắng có vạch chéo đen = `end_restrictions` |
+| `mandatory` | `mandatory_direction` · `pass_side` · `roundabout` · `mandatory_path` · `other_mandatory` | Mũi tên rẽ/đi thẳng = `mandatory_direction`; mũi tên chéo xuống (đi bên phải/trái chướng ngại) = `pass_side`; ba mũi tên vòng tròn = `roundabout`; đường dành cho xe đạp/người đi bộ = `mandatory_path` |
+| `danger_warning` | `curve` · `general_danger` · `junction_warning` · `pedestrians_ahead` · `children` · `road_works` · `slippery_snow_ice` · `uneven_road` · `road_narrows` · `traffic_signals_ahead` · `animals` · `chevron_alignment` · `other_warning` | Cua đơn/cua kép = `curve`; dấu "!" = `general_danger`; nút giao = `junction_warning`; bông tuyết = `slippery_snow_ice`; người làm đường = `road_works`; bảng mũi tên chỉ hướng vòng cua = `chevron_alignment`; biển vàng chỉ có chữ (END FREEWAY…) = `other_warning` |
+| `informative` | `pedestrian_crossing` · `parking` · `one_way` · `dead_end` · `direction_guide` · `route_number` · `town_entry_exit` · `motorway_expressway` · `street_name` · `bus_stop` · `other_informative` | Vuông xanh có người đi bộ = `pedestrian_crossing` (**khác** tam giác cảnh báo người đi bộ = `danger_warning/pedestrians_ahead`); chữ "P" = `parking`; biển chỉ hướng đi các nơi, bảng giá long môn, bảng exit = `direction_guide`; tấm ghi số quốc lộ = `route_number`; biển tên đường = `street_name` |
 | `supplementary_panel` | `panel_distance` · `panel_time` · `panel_vehicle_type` · `panel_direction` · `panel_text_other` | "↑ 300 m" = `panel_distance`; "7–18 h" = `panel_time`; hình xe tải = `panel_vehicle_type`; mũi tên = `panel_direction` |
 | `unknown` | `unknown` | Chỉ đi cùng `sign_category = unknown` |
 
@@ -205,6 +205,8 @@ Không áp dụng — task ảnh tĩnh (dùng Shape, không dùng Track; mỗi �
 
 ## 9. Examples
 
+### 9.1 Tóm tắt quyết định
+
 Ảnh ví dụ thuộc split `example`; các dòng đánh dấu (calib) thuộc split `calibration` — chỉ nêu quyết định cho object
 được nhắc tới. Object không nhắc tới trong ảnh vẫn label theo rule chung.
 
@@ -216,6 +218,115 @@ Không áp dụng — task ảnh tĩnh (dùng Shape, không dùng Track; mỗi �
 | GTS05 (calib) | Góc phải: cột có mặt sau của một tấm tam giác và một tấm tròn (tấm kim loại xám) | 2 box, `facing = back`, `sign_category = unknown`, `sign_type = unknown`, `relevance = not_ego`, `value_text = -` | Mục 5 (mặt sau), 4.4 |
 | BDD01 (calib) | Bảng xanh "23rd Avenue / 16th Avenue" + bảng vàng mũi tên trên giá long môn; **phản chiếu** của chính các bảng này trên capô | Bảng thật: `informative / direction_guide`, `mount = overhead`, `ego`. Phản chiếu trên capô: **không label** | 2 (gantry), mục 5 (phản chiếu) |
 | BDD04 (calib) | Ảnh Mỹ, xa: thoi vàng mũi tên rẽ, ngay dưới là tấm vàng nhỏ "15"; biển tròn vàng nhỏ bên trái; biển trắng chữ đỏ lề phải | Thoi vàng: `danger_warning / curve` (hệ Mỹ). Tấm "15" gắn ngay dưới: box riêng `supplementary_panel / panel_text_other`, `value_text = 15`. Biển nhỏ không đọc được ký hiệu: chọn nhóm theo màu/hình, `sign_type = other_<nhóm>`, `readability = illegible` | 0 (hệ Mỹ), 2 (biển phụ box riêng), 6 (biển 10–19 px) |
+
+### 9.2 Ảnh ví dụ đã label
+
+Các ảnh dưới đây là **ground truth CVAT** của nhóm (bộ `ground_truth_12`). Phần trên mỗi hình là toàn cảnh, khung nét
+đứt trắng là vùng được phóng to ở hàng dưới. Màu box theo `sign_category`, số trên box khớp với cột **#** trong bảng
+bên dưới hình. Khung nét đứt đỏ là vật **không được label**.
+
+![Chú giải màu](assets/examples/legend.png)
+
+#### GTS06 — Biển tốc độ và 2 biển phụ (example)
+
+![GTS06](assets/examples/GTS06_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `prohibitory / speed_limit` | `value_text = 30`, `ego` | Tròn viền đỏ có số, lề phải phần đường mình |
+| 2 | `supplementary_panel / panel_distance` | `value_text = ?`, `degraded`, `ego` | Chữ số khoảng cách bị nhoè → ghi `?`, **không đoán** 300 m |
+| 3 | `supplementary_panel / panel_time` | `value_text = 7-18h`, `degraded`, `ego` | Mỗi tấm phụ là một box riêng, không gộp với biển chính |
+
+**Edge case:** ba tấm trên cùng một cột → 3 box. Gộp thành một box hoặc đoán số khoảng cách đều là lỗi.
+
+#### GTS23 — Hai biển STOP ở nút giao chữ T (example, critical)
+
+![GTS23](assets/examples/GTS23_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `mandatory / pass_side` | `ego` | Tròn nền xanh, mũi tên chéo xuống: đi bên phải đảo giao thông |
+| 2 | `priority / stop` | `ego` | STOP trên đảo bên trái là biển lặp lại → vẫn áp dụng cho xe mình |
+| 3 | `informative / direction_guide` | `degraded`, `ego` | Biển chỉ hướng ở nút giao phía trước |
+| 4 | `unknown / unknown` | `facing = back`, `not_ego` | Mặt sau tấm biển → không suy loại biển |
+| 5 | `informative / direction_guide` | `partial`, `illegible`, `ego` | Bị biển STOP che một phần; box chỉ ôm phần nhìn thấy |
+| 6 | `priority / stop` | `ego` | STOP lề phải |
+
+**Edge case:** biển bên trái đường vẫn có thể là `ego`. Bỏ sót STOP bên trái hoặc gán `not_ego` là lỗi **critical**.
+
+#### BDD06 — Thoi vàng ở Mỹ là biển cảnh báo (example)
+
+![BDD06](assets/examples/BDD06_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `danger_warning / other_warning` | `value_text = END FREEWAY 1/2 MI`, `ego` | Nằm trên dải phân cách của phần đường mình |
+| 2 | `danger_warning / other_warning` | `illegible`, `unclear` | Biển vàng nhỏ, không đọc được, không rõ thuộc làn nào |
+| 3 | `danger_warning / other_warning` | `value_text = END FREEWAY 1/2 MI`, `ego` | Biển lặp lại ở lề phải |
+
+**Edge case:** thoi vàng ở Mỹ **không phải** `priority_road` như ở Đức. Luôn xác định hệ thống biển trước (mục 0).
+
+#### GTS05 — Mặt sau, biển bị cắt ở mép ảnh, biển ở đường cắt ngang (calibration)
+
+![GTS05](assets/examples/GTS05_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `informative / pedestrian_crossing` | `unclear` | Vuông xanh người đi bộ, đặt ở góc nút giao khi xe đang rẽ |
+| 2 | `informative / bus_stop` | `partial`, `degraded`, `unclear` | Biển trạm xe buýt nhỏ, bị che một phần |
+| 3 | `prohibitory / speed_limit` | `value_text = 30`, `unclear`, `needs_review` | `unclear` + `speed_limit` là critical → bắt buộc escalate |
+| 4 | `unknown / unknown` | `facing = back`, `not_ego` | Mặt sau tấm tam giác: **không** gán `give_way` |
+| 5 | `unknown / unknown` | `facing = back`, `not_ego` | Mặt sau tấm tròn |
+| 6 | `informative / street_name` | `partial`, `illegible`, `not_ego` | Biển tên đường thuộc đường cắt ngang |
+| 7 | `unknown / unknown` | `truncated`, `illegible`, `mount = other`, `needs_review` | Mẩu biển bị mép ảnh cắt, không đủ bằng chứng → escalate |
+
+**Edge case:** biển quán "kleinstadt" trên tường là biển thương mại → **không label**. Mặt sau biển không bao giờ là
+`ego`.
+
+#### BDD01 — Giá long môn nhiều bảng và phản chiếu trên capô (calibration)
+
+![BDD01](assets/examples/BDD01_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `informative / direction_guide` | `mount = overhead`, `ego` | Bảng xanh có khung riêng → box riêng; tab EXIT dính liền nên cùng box |
+| 2 | `informative / direction_guide` | `mount = overhead`, `ego` | Bảng thứ hai trên cùng giá |
+| 3 | `danger_warning / other_warning` | `illegible`, `ego` | Biển vàng nhỏ dưới giá, không đọc được ký hiệu |
+| 4 | `danger_warning / other_warning` | `value_text = 10`, `overhead`, `needs_review` | Bảng vàng mũi tên + số 10, không chắc loại → escalate |
+| 5 | `danger_warning / other_warning` | `illegible`, `unclear` | Biển vàng nhỏ ở nhánh rẽ |
+| 6 | `danger_warning / chevron_alignment` | `degraded`, `ego` | Chevron ở mũi tách làn (gore) |
+
+**Edge case:** phản chiếu các bảng trên capô (khung đỏ) **không label**, kể cả khi nhìn rõ.
+
+#### BDD04 — Biển Mỹ nhỏ, xa (calibration)
+
+![BDD04](assets/examples/BDD04_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `danger_warning / curve` | `illegible`, `ego` | Thoi vàng mũi tên rẽ (hệ Mỹ) |
+| 2 | `supplementary_panel / panel_text_other` | `value_text = 15`, `degraded`, `ego` | Tấm vàng "15" gắn ngay dưới → box riêng |
+| 3 | `danger_warning / other_warning` | `degraded`, `unclear` | Biển vàng nhỏ, không rõ ký hiệu → `other_*` |
+| 4 | `prohibitory / other_prohibitory` | `illegible`, `ego` | Chữ nhật trắng chữ đỏ, không đọc được nội dung |
+
+**Edge case:** biển 10–19 px vẫn phải label. Chọn nhóm theo màu và hình dạng; không thấy ký hiệu thì dùng `other_<nhóm>`,
+không đoán loại cụ thể.
+
+#### BDD05 — Biển bên kia đường và mặt sau bảng lớn (calibration)
+
+![BDD05](assets/examples/BDD05_labeled.jpg)
+
+| # | Nhóm / loại | Attribute chính | Vì sao |
+|---|---|---|---|
+| 1 | `informative / other_informative` | `illegible`, `unclear` | Biển nhỏ ở lề đối diện |
+| 2 | `unknown / unknown` | `facing = back`, `not_ego` | Mặt sau tấm biển nhỏ phía trên |
+| 3 | `unknown / unknown` | `facing = back`, `not_ego` | Mặt sau bảng lớn |
+| 4 | `prohibitory / other_prohibitory` | `illegible`, `unclear` | Chữ nhật trắng, không đọc được, không rõ thuộc đường nào |
+| 5 | `informative / other_informative` | `illegible`, `unclear` | Biển nâu/đỏ nhỏ, không đọc được |
+| 6 | `unknown / unknown` | `facing = back`, `not_ego` | Mặt sau biển thoi xa |
+
+**Edge case:** không gán `ego` cho mọi biển nhìn thấy mặt trước. Một ảnh không đủ để biết biển thuộc đường nào thì
+chọn `unclear`.
 
 ## 10. Common mistakes
 
