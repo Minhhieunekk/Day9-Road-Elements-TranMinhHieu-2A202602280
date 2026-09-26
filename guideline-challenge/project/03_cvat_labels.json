@@ -1,1 +1,207 @@
-[]
+[
+  {
+    "name": "traffic_sign",
+    "color": "#E53935",
+    "type": "rectangle",
+    "attributes": [
+      {
+        "name": "sign_category",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "__undefined__",
+        "values": [
+          "__undefined__",
+          "priority",
+          "prohibitory",
+          "mandatory",
+          "danger_warning",
+          "informative",
+          "supplementary_panel",
+          "unknown"
+        ]
+      },
+      {
+        "name": "sign_type",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "__undefined__",
+        "values": [
+          "__undefined__",
+          "stop",
+          "give_way",
+          "priority_road",
+          "end_priority_road",
+          "priority_next_junction",
+          "priority_over_oncoming",
+          "give_way_to_oncoming",
+          "speed_limit",
+          "end_speed_limit",
+          "no_entry",
+          "closed_to_all_vehicles",
+          "no_overtaking",
+          "no_overtaking_trucks",
+          "vehicle_type_ban",
+          "dimension_weight_limit",
+          "no_turn",
+          "no_parking",
+          "no_stopping",
+          "end_restrictions",
+          "other_prohibitory",
+          "mandatory_direction",
+          "pass_side",
+          "roundabout",
+          "mandatory_path",
+          "other_mandatory",
+          "curve",
+          "general_danger",
+          "junction_warning",
+          "pedestrians_ahead",
+          "children",
+          "road_works",
+          "slippery_snow_ice",
+          "uneven_road",
+          "road_narrows",
+          "traffic_signals_ahead",
+          "animals",
+          "chevron_alignment",
+          "other_warning",
+          "pedestrian_crossing",
+          "parking",
+          "one_way",
+          "dead_end",
+          "direction_guide",
+          "route_number",
+          "town_entry_exit",
+          "motorway_expressway",
+          "street_name",
+          "bus_stop",
+          "other_informative",
+          "panel_distance",
+          "panel_time",
+          "panel_vehicle_type",
+          "panel_direction",
+          "panel_text_other",
+          "unknown"
+        ]
+      },
+      {
+        "name": "value_text",
+        "mutable": false,
+        "input_type": "text",
+        "default_value": "-",
+        "values": [
+          "-"
+        ]
+      },
+      {
+        "name": "relevance",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "__undefined__",
+        "values": [
+          "__undefined__",
+          "ego",
+          "not_ego",
+          "unclear"
+        ]
+      },
+      {
+        "name": "facing",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "front",
+        "values": [
+          "front",
+          "back",
+          "edge_on"
+        ]
+      },
+      {
+        "name": "occlusion",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "none",
+        "values": [
+          "none",
+          "partial",
+          "heavy"
+        ]
+      },
+      {
+        "name": "readability",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "clear",
+        "values": [
+          "clear",
+          "degraded",
+          "illegible"
+        ]
+      },
+      {
+        "name": "truncated",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": [
+          "false"
+        ]
+      },
+      {
+        "name": "mount",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "roadside",
+        "values": [
+          "roadside",
+          "overhead",
+          "other"
+        ]
+      },
+      {
+        "name": "temporary",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": [
+          "false"
+        ]
+      },
+      {
+        "name": "needs_review",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": [
+          "false"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "no_traffic_sign",
+    "color": "#43A047",
+    "type": "tag",
+    "attributes": []
+  },
+  {
+    "name": "image_escalate",
+    "color": "#8E24AA",
+    "type": "tag",
+    "attributes": [
+      {
+        "name": "reason",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "__undefined__",
+        "values": [
+          "__undefined__",
+          "image_quality",
+          "jurisdiction_unclear",
+          "scope_unclear",
+          "other"
+        ]
+      }
+    ]
+  }
+]
