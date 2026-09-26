@@ -177,31 +177,5 @@
         ]
       }
     ]
-  },
-  {
-    "name": "no_traffic_sign",
-    "color": "#43A047",
-    "type": "tag",
-    "attributes": []
-  },
-  {
-    "name": "image_escalate",
-    "color": "#8E24AA",
-    "type": "tag",
-    "attributes": [
-      {
-        "name": "reason",
-        "mutable": false,
-        "input_type": "select",
-        "default_value": "__undefined__",
-        "values": [
-          "__undefined__",
-          "image_quality",
-          "jurisdiction_unclear",
-          "scope_unclear",
-          "other"
-        ]
-      }
-    ]
   }
 ]

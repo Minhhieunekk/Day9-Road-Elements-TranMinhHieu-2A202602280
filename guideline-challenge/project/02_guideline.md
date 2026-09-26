@@ -3,8 +3,8 @@
 **Version:** v1
 
 > Đọc hết mục 1–7 trước khi vẽ object đầu tiên. Mục 4 (taxonomy) và mục 7 (escalation) là nơi hay sai nhất.
-> Mọi quyết định phải nhìn thấy được trong file export CVAT: box + attribute, hoặc tag cả ảnh. Không có "quyết định
-> trong đầu".
+> Mọi quyết định phải nhìn thấy được trong file export CVAT: box + attribute. Không có "quyết định trong
+> đầu".
 
 ## 0. Căn cứ pháp lý (đọc 2 phút)
 
@@ -59,8 +59,8 @@ hình dạng/màu/ký hiệu theo luật), gồm:
   in trên **cùng một nền, cùng một viền** (ví dụ tab "EXIT 40" dính liền mép trên bảng xanh) → một box.
 - Hai biển giống hệt nhau ở hai bên đường (lặp lại theo luật) → **hai box**, cả hai đều label.
 - Biển gấp đôi / biển hai mặt: chỉ label mặt nhìn thấy trong ảnh.
-- Ảnh không có biển nào trong scope → **không vẽ box**, gán tag cả ảnh `no_traffic_sign` (bắt buộc — để phân biệt "đã
-  kiểm, không có biển" với "quên label").
+- Ảnh không có biển nào trong scope → **không vẽ box nào** (ảnh để trống là quyết định "không có biển"; vì vậy phải
+  quét hết ảnh trước khi chuyển ảnh).
 
 ## 3. Geometry rule
 
@@ -168,10 +168,7 @@ chỉ có hiệu lực với dòng xe **nhìn thấy mặt biển**.
 | Biển trên xe (xe buýt, xe tải) | IGNORE | không vẽ |
 | Cạnh ngắn < 10 px | IGNORE | không vẽ |
 | Che > 90% (chỉ còn cột hoặc một mẩu viền) | IGNORE | không vẽ |
-| Ảnh đã quét hết, không có biển nào trong scope | Tag ảnh | tag `no_traffic_sign` (không có box nào) |
-
-`no_traffic_sign` và box `traffic_sign` **không bao giờ** cùng xuất hiện trên một ảnh. Biển IGNORE (quá nhỏ, phản
-chiếu…) không làm mất quyền dùng `no_traffic_sign`: ảnh chỉ có biển < 10 px vẫn gán `no_traffic_sign`.
+| Ảnh đã quét hết, không có biển nào trong scope (kể cả ảnh chỉ có biển < 10 px) | IGNORE cả ảnh | không có box nào |
 
 ## 6. Visibility / occlusion
 
@@ -192,15 +189,14 @@ chiếu…) không làm mất quyền dùng `no_traffic_sign`: ảnh chỉ có b
 | Quyết định | Khi nào | Thể hiện trong CVAT (nhìn thấy trong export) |
 |---|---|---|
 | **LABEL** | Chắc là biển chính thức và xác định được ít nhất nhóm | box + `sign_category` ≠ `unknown` |
-| **IGNORE** | Thuộc danh sách ngoài scope ở mục 1/5 | không có box (ảnh không còn biển nào → tag `no_traffic_sign`) |
+| **IGNORE** | Thuộc danh sách ngoài scope ở mục 1/5 | không có box (ảnh không còn biển nào → ảnh trống) |
 | **UNKNOWN** | Chắc là biển nhưng không xác định được nhóm (nhỏ, mờ, mặt sau, bị che) | box + `sign_category = unknown` + `sign_type = unknown`; số không đọc được → `value_text = ?` |
-| **ESCALATE (object)** | (a) không chắc là biển chính thức hay biển thương mại/vật khác; (b) hai nhóm đều hợp lý sau khi áp quy tắc 4.1; (c) `relevance = unclear` với `stop`/`give_way`/`no_entry`/`speed_limit`; (d) biển tốc độ có `value_text = ?` và `relevance = ego` | vẫn vẽ box, điền **lựa chọn tốt nhất** cho mọi attribute, bật `needs_review = true` |
-| **ESCALATE (ảnh)** | Cả ảnh không dùng được: mờ toàn ảnh, không xác định được hệ thống biển, nghi sai scope | tag `image_escalate`, chọn `reason` (`image_quality` · `jurisdiction_unclear` · `scope_unclear` · `other`); các biển nhìn thấy vẫn label bình thường |
+| **ESCALATE** | (a) không chắc là biển chính thức hay biển thương mại/vật khác; (b) hai nhóm đều hợp lý sau khi áp quy tắc 4.1; (c) `relevance = unclear` với `stop`/`give_way`/`no_entry`/`speed_limit`; (d) biển tốc độ có `value_text = ?` và `relevance = ego`; (e) cả ảnh mờ/khó (đêm, loá, không rõ hệ thống biển) → vẫn label từng biển, bật `needs_review` cho các biển bị ảnh hưởng | vẫn vẽ box, điền **lựa chọn tốt nhất** cho mọi attribute, bật `needs_review = true` |
 
 Ưu tiên: **UNKNOWN trung thực tốt hơn đoán sai.** Đoán sai nhóm critical (ví dụ gán `priority/stop` cho biển mờ không
 chắc) tệ hơn `unknown` + `needs_review`.
 
-Đường escalation: object có `needs_review = true` hoặc ảnh có tag `image_escalate` được reviewer (QA owner) xem lại
+Đường escalation: object có `needs_review = true` được reviewer (QA owner) xem lại
 trong vòng review; quyết định cuối được ghi thành rule/ví dụ mới ở phiên bản guideline sau.
 
 ## 8. Temporal rule
@@ -214,14 +210,12 @@ Không áp dụng — task ảnh tĩnh (dùng Shape, không dùng Track; mỗi �
 
 | sample_id | Thấy gì | Expected output | Rule áp dụng |
 |---|---|---|---|
-| GTS06 | Lề phải: biển tròn viền đỏ "30", bên dưới 2 tấm nhỏ "↑ 300 m" và "7–18 h" | 3 box. (1) `prohibitory / speed_limit`, `value_text = 30`, `relevance = ego`. (2) `supplementary_panel / panel_distance`, `value_text = 300m`, `ego`. (3) `supplementary_panel / panel_time`, `value_text = 7-18h`, `ego` | 2 (mỗi tấm một box), 4.1 quy tắc 2, 4.3 `value_text` |
+| GTS06 | Lề phải: biển tròn viền đỏ "30", bên dưới 2 tấm nhỏ: "↑ 3?? m ↑" (chữ số giữa bị nhoè) và "7–18 h" | 3 box. (1) `prohibitory / speed_limit`, `value_text = 30`, `relevance = ego`. (2) `supplementary_panel / panel_distance`, `value_text = ?` (không đọc chắc chữ số → **không đoán**), `readability = degraded`, `ego`. (3) `supplementary_panel / panel_time`, `value_text = 7-18h`, `ego` | 2 (mỗi tấm một box), 4.1 quy tắc 2, 4.3 `value_text`, 6 (không đoán số) |
 | GTS23 | Nút giao chữ T phía trước, 2 biển STOP bát giác (đảo bên trái và lề phải); biển tròn xanh mũi tên chéo xuống phải ở đảo trái | 2 box `priority / stop`, cả hai `relevance = ego` (biển lặp lại hai bên). Biển tròn xanh: `mandatory / pass_side`, `ego` | 4.1 quy tắc 1, 4.4 (biển lặp lại bên trái vẫn là `ego`) — **critical** |
-| GTS16 | Cột bên phải: thoi vàng viền trắng, trên nó tấm vàng "226"; cạnh đèn giao thông có biển tên đường xanh; tường phải có chữ "A" đỏ của nhà thuốc | Thoi vàng: `priority / priority_road`, `ego` (hệ Đức — **không** phải cảnh báo). Tấm "226": `informative / route_number`, `value_text = 226`. Biển tên đường: `informative / street_name`. Chữ "A" nhà thuốc và đèn giao thông: **không label** | 0 (xác định hệ thống trước), 4.1, mục 5 (biển thương mại, đèn) — **critical** |
 | BDD06 | Ảnh Mỹ, hai biển thoi vàng "END FREEWAY 1/2 MI" (dải giữa bên trái và lề phải) | 2 box `danger_warning / other_warning`, `value_text = END FREEWAY 1/2 MI`, cả hai `ego` (bên trái nằm trên dải phân cách của phần đường mình) | 0 (thoi vàng ở Mỹ = cảnh báo), 4.1 quy tắc 3, 4.4 |
-| GTS28 | Đường làng, chỉ có biển quán/biển hiệu treo trên nhà | Không box; tag `no_traffic_sign` | Mục 5 (biển thương mại), 2 (tag ảnh âm tính) — quét kỹ ở zoom 200% trước khi gán |
 | GTS05 (calib) | Góc phải: cột có mặt sau của một tấm tam giác và một tấm tròn (tấm kim loại xám) | 2 box, `facing = back`, `sign_category = unknown`, `sign_type = unknown`, `relevance = not_ego`, `value_text = -` | Mục 5 (mặt sau), 4.4 |
 | BDD01 (calib) | Bảng xanh "23rd Avenue / 16th Avenue" + bảng vàng mũi tên trên giá long môn; **phản chiếu** của chính các bảng này trên capô | Bảng thật: `informative / direction_guide`, `mount = overhead`, `ego`. Phản chiếu trên capô: **không label** | 2 (gantry), mục 5 (phản chiếu) |
-| BDD13 (calib) | Tranh tường lớn hình khiên xa lộ liên bang "INNERCITY HOME" trên toà nhà | **Không label** (tranh tường, không phải biển chính thức) | Mục 1 / 5 — biển giả |
+| BDD04 (calib) | Ảnh Mỹ, xa: thoi vàng mũi tên rẽ, ngay dưới là tấm vàng nhỏ "15"; biển tròn vàng nhỏ bên trái; biển trắng chữ đỏ lề phải | Thoi vàng: `danger_warning / curve` (hệ Mỹ). Tấm "15" gắn ngay dưới: box riêng `supplementary_panel / panel_text_other`, `value_text = 15`. Biển nhỏ không đọc được ký hiệu: chọn nhóm theo màu/hình, `sign_type = other_<nhóm>`, `readability = illegible` | 0 (hệ Mỹ), 2 (biển phụ box riêng), 6 (biển 10–19 px) |
 
 ## 10. Common mistakes
 
@@ -239,8 +233,7 @@ Không áp dụng — task ảnh tĩnh (dùng Shape, không dùng Track; mỗi �
 7. **Label phản chiếu trên capô, sticker trên kính, biển trên xe buýt, tranh tường** — tất cả là IGNORE.
 8. **Label đèn giao thông hoặc cọc tiêu/tấm sọc Leitbake** là biển — ngoài scope.
 9. **Box ôm cả cột** hoặc thừa nhiều; box biển nhỏ vẽ ở zoom 100% bị lệch > 1 px.
-10. **Quên `no_traffic_sign`** trên ảnh âm tính, hoặc gán `no_traffic_sign` khi vẫn còn biển xa ≥ 10 px chưa thấy —
-    luôn quét hết ảnh ở zoom 200% (đặc biệt vùng xa ở giữa ảnh và hai lề) trước khi kết luận.
+10. **Bỏ sót biển xa ≥ 10 px** rồi để ảnh trống như ảnh không có biển — luôn quét hết ảnh ở zoom 200% (đặc biệt vùng xa ở giữa ảnh và hai lề) trước khi kết luận.
 11. **Để sót `__undefined__`** ở `sign_category`, `sign_type`, `relevance` — trong export còn `__undefined__` là
     object chưa hoàn thành. Dùng chế độ **Attribute annotation** để đi qua từng object.
 12. **Tổ hợp chéo nhóm** (ví dụ `sign_category = mandatory`, `sign_type = speed_limit`) — kiểm bảng 4.2.

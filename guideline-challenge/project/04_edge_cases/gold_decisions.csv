@@ -1,1 +1,15 @@
 sample_id,decision_id,expected,severity,rationale
+GTS18,d1,label=traffic_sign x2 (danger_warning/curve + prohibitory/speed_limit),major,hai tấm riêng trên cùng cột; mục 2 guideline
+GTS18,d2,speed_limit: value_text=30; relevance=ego,critical,biển tốc độ lề phải áp dụng cho xe mình; sai số là critical
+GTS18,d3,"geometry: box tam giác ≈ (710,265.5)-(780,342), mỗi cạnh lệch ≤ 2 px, không ôm biển 30 bên dưới",minor,mục 3 tight box từng tấm
+BDD09,d1,thoi vàng = danger_warning/other_warning; relevance=ego (không phải priority_road),major,hệ Mỹ: thoi vàng là cảnh báo (mục 0 + lỗi thường gặp 1)
+BDD09,d2,bảng xanh lề phải = informative/direction_guide; relevance=ego,minor,biển chỉ hướng hệ Mỹ
+GTS17,d1,label=prohibitory/no_entry x2; relevance=ego,critical,cấm đi vào là biển critical cho xe mình
+GTS17,d2,2 tấm tam giác xám = facing=back; sign_category=unknown; relevance=not_ego (không phải give_way),major,mặt sau không được suy loại biển (mục 5)
+GTS17,d3,biển hiệu EINGANG/WARENAUSGABE trên tường: không có box,minor,biển thương mại ngoài scope
+GTS17,d4,tấm Süd: có box với needs_review=true,major,không chắc biển chính thức → ESCALATE (mục 7a)
+GTS08,d1,speed_limit x2: value_text=120 hoặc (? + needs_review=true); relevance=ego,critical,ảnh nhoè: không được đoán số khác
+GTS08,d2,label=prohibitory/no_overtaking_trucks x2,major,biển cấm xe tải vượt ở hai bên
+GTS08,d3,"geometry: biển 120 bên trái ≈ (232.5,488)-(274,526), box riêng, không ôm biển xe tải bên dưới",minor,mục 3 tight box từng tấm
+BDD21,d1,label=danger_warning/chevron_alignment x1; relevance=ego,major,chevron MUTCD W1-8 thuộc scope (mục 1)
+BDD21,d2,ảnh chỉ có đúng 1 box (đèn giao thông không label),minor,đèn giao thông ngoài scope

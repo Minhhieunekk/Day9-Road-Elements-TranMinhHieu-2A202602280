@@ -1,1 +1,13 @@
 sample_id,split,tags,reason
+GTS06,example,normal,Biển tốc độ 30 + 2 biển phụ (khoảng cách mờ và giờ 7-18h): mỗi tấm một box; biển phụ là supplementary_panel; value_text không đọc chắc thì ghi ?
+GTS23,example,critical;normal,Hai biển STOP ở hai bên nút giao chữ T: đều priority/stop và relevance=ego (biển lặp lại bên trái); biển pass_side trên đảo
+BDD06,example,normal;conflict,Hai thoi vàng Mỹ END FREEWAY 1/2 MI = danger_warning/other_warning (khác thoi vàng Đức); biển bên trái trên dải phân cách phần đường mình nên vẫn là ego
+GTS05,calibration,edge;occlusion;conflict,Nhiều mặt sau biển (facing=back) + Z.350 + biển 30 ở đường cắt ngang + biển bị mép ảnh cắt: thử quy tắc facing / truncated / relevance=unclear
+BDD01,calibration,edge;conflict,Giá long môn nhiều bảng (tách box theo khung) + tấm vàng mũi tên 10 + chevron gore; phản chiếu bảng trên capô không được label
+BDD04,calibration,small_far;edge,Biển Mỹ nhỏ xa: biển cua + tấm tốc độ khuyến cáo 15 + biển tròn vàng + biển quy định trắng
+BDD05,calibration,ambiguity;small_far;occlusion,Biển nâu/trắng nhỏ bên kia đường và mặt sau bảng lớn: thử quy tắc unknown / back / relevance=unclear
+GTS18,blind,normal,Cảnh đơn giản: biển cua kép + tốc độ 30 lề phải rõ nét
+BDD09,blind,normal;edge,Biển Mỹ: thoi vàng làn đường thu hẹp + bảng xanh chỉ hướng lề phải; thử đọc hệ Mỹ
+GTS17,blind,critical;edge;conflict,Hai biển cấm đi vào (critical) dưới hai mặt sau biển nhường đường (facing=back); biển hiệu EINGANG không label; biển Süd nghi biển tư nhân (escalate)
+GTS08,blind,critical;edge;low_visibility,Chạng vạng + nhoè chuyển động: biển tốc độ 120 và cấm xe tải vượt ở hai bên; bảng thông tin công trường lớn
+BDD21,blind,ambiguity;edge,Chevron vàng Mỹ W1-8 ở khúc cua: label là danger_warning/chevron_alignment; đèn giao thông không label

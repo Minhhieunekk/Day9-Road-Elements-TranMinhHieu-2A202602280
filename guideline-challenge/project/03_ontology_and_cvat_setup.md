@@ -19,14 +19,13 @@ placeholder mới là xong (gate G2).
 | `mount` | — | attribute | `roadside`, `overhead`, `other` | `roadside` | không | Vị trí lắp đặt, hữu ích cho bản đồ và suy luận relevance |
 | `temporary` | — | attribute (checkbox) | true/false | `false` | không | Biển công trường/tạm (nền vàng Đức, cam Mỹ) |
 | `needs_review` | — | attribute (checkbox) | true/false | `false` | không | ESCALATE cấp object |
-| `no_traffic_sign` | tag | class (tag ảnh) | — | — | — | Quyết định "đã kiểm, không có biển" nhìn thấy được trong export |
-| `image_escalate` | tag | class (tag ảnh) | attribute `reason`: `__undefined__`, `image_quality`, `jurisdiction_unclear`, `scope_unclear`, `other` | `__undefined__` | không | ESCALATE cấp ảnh |
 
 ## Class hay attribute
 
 Chỉ có một class hình học `traffic_sign`: mọi biển cùng geometry và QA rule; tách ~50 loại biển thành class sẽ nổ
 taxonomy và làm annotator chọn sai label. Nhóm/loại biển, số trên biển, relevance, visibility là **thuộc tính của cùng
-một object** → attribute. Hai tag ảnh là class riêng vì chúng là quyết định cấp ảnh, không phải object.
+một object** → attribute. Không dùng tag cấp ảnh: ảnh không có box = không có biển; nghi ngờ thì dùng
+`sign_category = unknown` hoặc `needs_review` trên từng biển.
 
 Default có thể gây bias: `sign_category`, `sign_type`, `relevance` để `__undefined__` để buộc chọn (còn
 `__undefined__` trong export = chưa xong). `facing = front`, `occlusion = none`, `readability = clear` là default
@@ -35,10 +34,13 @@ biển có box nhỏ (< 20 px) hoặc `sign_category = unknown` mà vẫn `reada
 
 ## CVAT
 
-- **Phiên bản CVAT** (`make cvat-status`): TODO
+- **Phiên bản CVAT** (`make cvat-status`): 2.74.1 (http://localhost:8080)
 - **Tên task calibration** (có version guideline, ví dụ `team07-calib-v1`): TODO
 - **Guide của task đã dán `02_guideline.md`?** TODO (có / chưa)
-- **Nhóm dùng Track hay Shape, vì sao:** TODO
+- **Nhóm dùng Track hay Shape, vì sao:** Shape — task ảnh tĩnh, mỗi ảnh là một cảnh độc lập, không có object nào
+  cần theo qua nhiều frame; không attribute nào `mutable`.
+- **Ground truth để chấm peer:** `cvat_annotations/ground_truth_12/` (12 ảnh trong `dataraw/traffic_sign_gt/`,
+  53 box), chấm bằng `python project/check_peer_accuracy.py <export peer>.zip`.
 
 ## Setup test
 

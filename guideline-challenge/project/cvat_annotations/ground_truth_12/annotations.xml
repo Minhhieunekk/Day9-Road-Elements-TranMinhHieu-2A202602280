@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <image id="0" name="BDD01.jpg" width="1280" height="720">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="608.50" ytl="155.00" xbr="690.00" ybr="207.50" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">overhead</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="690.50" ytl="155.00" xbr="774.00" ybr="206.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">overhead</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="774.00" ytl="152.50" xbr="815.00" ybr="201.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">10</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">overhead</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">true</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="715.50" ytl="250.00" xbr="730.00" ybr="275.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="811.00" ytl="255.50" xbr="823.50" ybr="273.50" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="811.50" ytl="303.50" xbr="831.50" ybr="328.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">chevron_alignment</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="1" name="BDD04.jpg" width="1280" height="720">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="683.50" ytl="305.00" xbr="700.50" ybr="325.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">curve</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="686.00" ytl="325.00" xbr="700.00" ybr="340.00" z_order="0">
+      <attribute name="sign_category">supplementary_panel</attribute>
+      <attribute name="sign_type">panel_text_other</attribute>
+      <attribute name="value_text">15</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="634.00" ytl="328.00" xbr="648.00" ybr="340.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="940.00" ytl="250.50" xbr="966.00" ybr="275.50" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">other_prohibitory</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="2" name="BDD05.jpg" width="1280" height="720">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="140.00" ytl="286.00" xbr="160.00" ybr="299.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">other_informative</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="419.00" ytl="291.00" xbr="440.00" ybr="309.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">other_informative</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="445.50" ytl="289.00" xbr="464.50" ybr="307.50" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">other_prohibitory</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="528.50" ytl="287.50" xbr="544.00" ybr="304.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="183.00" ytl="160.00" xbr="224.00" ybr="214.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="190.50" ytl="218.00" xbr="300.50" ybr="272.50" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="3" name="BDD06.jpg" width="1280" height="720">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="410.50" ytl="279.50" xbr="485.50" ybr="351.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">END FREEWAY 1/2 MI</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="955.50" ytl="322.50" xbr="1042.00" ybr="401.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">END FREEWAY 1/2 MI</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="780.50" ytl="384.00" xbr="805.00" ybr="407.50" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="4" name="BDD09.jpg" width="1280" height="720">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="705.50" ytl="207.50" xbr="737.50" ybr="240.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">other_warning</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="848.00" ytl="216.00" xbr="889.50" ybr="254.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="5" name="BDD21.jpg" width="1280" height="720">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="545.50" ytl="292.50" xbr="573.00" ybr="329.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">chevron_alignment</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="6" name="GTS05.png" width="1360" height="800">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="295.00" ytl="342.00" xbr="359.00" ybr="414.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">pedestrian_crossing</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="458.50" ytl="415.00" xbr="488.00" ybr="450.50" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">speed_limit</attribute>
+      <attribute name="value_text">30</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">true</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="857.00" ytl="209.00" xbr="924.00" ybr="308.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="859.00" ytl="320.00" xbr="921.00" ybr="400.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="1" xtl="887.50" ytl="201.00" xbr="955.00" ybr="224.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">street_name</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">partial</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="1" xtl="411.00" ytl="451.00" xbr="430.00" ybr="464.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">bus_stop</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">partial</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1347.50" ytl="304.00" xbr="1357.50" ybr="382.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">true</attribute>
+      <attribute name="mount">other</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">true</attribute>
+    </box>
+  </image>
+  <image id="7" name="GTS06.png" width="1360" height="800">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="817.00" ytl="335.50" xbr="857.00" ybr="373.00" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">speed_limit</attribute>
+      <attribute name="value_text">30</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="817.00" ytl="373.50" xbr="859.00" ybr="393.00" z_order="0">
+      <attribute name="sign_category">supplementary_panel</attribute>
+      <attribute name="sign_type">panel_distance</attribute>
+      <attribute name="value_text">?</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="825.50" ytl="395.00" xbr="854.00" ybr="409.50" z_order="0">
+      <attribute name="sign_category">supplementary_panel</attribute>
+      <attribute name="sign_type">panel_time</attribute>
+      <attribute name="value_text">7-18h</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="8" name="GTS08.png" width="1360" height="800">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="232.50" ytl="488.00" xbr="274.00" ybr="526.00" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">speed_limit</attribute>
+      <attribute name="value_text">120</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="237.50" ytl="526.00" xbr="274.00" ybr="570.00" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">no_overtaking_trucks</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1033.50" ytl="502.00" xbr="1064.00" ybr="535.00" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">speed_limit</attribute>
+      <attribute name="value_text">120</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1032.00" ytl="535.00" xbr="1064.50" ybr="576.00" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">no_overtaking_trucks</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1171.00" ytl="445.00" xbr="1346.00" ybr="598.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">other_informative</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="768.00" ytl="551.00" xbr="820.00" ybr="594.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="640.00" ytl="569.00" xbr="662.00" ybr="588.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">overhead</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="735.00" ytl="562.00" xbr="768.00" ybr="593.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="9" name="GTS17.png" width="1360" height="800">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="687.50" ytl="349.00" xbr="743.00" ybr="391.00" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="700.00" ytl="397.00" xbr="737.50" ybr="434.50" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">no_entry</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1130.50" ytl="374.50" xbr="1174.50" ybr="420.50" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1140.50" ytl="421.00" xbr="1175.50" ybr="456.00" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">no_entry</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="1102.00" ytl="382.00" xbr="1127.00" ybr="395.50" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">other_informative</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">unclear</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">true</attribute>
+    </box>
+  </image>
+  <image id="10" name="GTS18.png" width="1360" height="800">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="710.00" ytl="265.50" xbr="780.00" ybr="342.00" z_order="0">
+      <attribute name="sign_category">danger_warning</attribute>
+      <attribute name="sign_type">curve</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="721.50" ytl="340.50" xbr="771.00" ybr="398.50" z_order="0">
+      <attribute name="sign_category">prohibitory</attribute>
+      <attribute name="sign_type">speed_limit</attribute>
+      <attribute name="value_text">30</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+  <image id="11" name="GTS23.png" width="1360" height="800">
+    <box label="traffic_sign" source="manual" occluded="0" xtl="440.50" ytl="404.50" xbr="485.50" ybr="452.00" z_order="0">
+      <attribute name="sign_category">priority</attribute>
+      <attribute name="sign_type">stop</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="930.00" ytl="379.50" xbr="980.00" ybr="429.50" z_order="0">
+      <attribute name="sign_category">priority</attribute>
+      <attribute name="sign_type">stop</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="383.50" ytl="527.50" xbr="423.00" ybr="569.00" z_order="0">
+      <attribute name="sign_category">mandatory</attribute>
+      <attribute name="sign_type">pass_side</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="580.00" ytl="433.50" xbr="622.00" ybr="447.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">degraded</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="1" xtl="912.00" ytl="413.50" xbr="956.00" ybr="442.00" z_order="0">
+      <attribute name="sign_category">informative</attribute>
+      <attribute name="sign_type">direction_guide</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">ego</attribute>
+      <attribute name="facing">front</attribute>
+      <attribute name="occlusion">partial</attribute>
+      <attribute name="readability">illegible</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+    <box label="traffic_sign" source="manual" occluded="0" xtl="589.50" ytl="513.50" xbr="609.50" ybr="535.50" z_order="0">
+      <attribute name="sign_category">unknown</attribute>
+      <attribute name="sign_type">unknown</attribute>
+      <attribute name="value_text">-</attribute>
+      <attribute name="relevance">not_ego</attribute>
+      <attribute name="facing">back</attribute>
+      <attribute name="occlusion">none</attribute>
+      <attribute name="readability">clear</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="mount">roadside</attribute>
+      <attribute name="temporary">false</attribute>
+      <attribute name="needs_review">false</attribute>
+    </box>
+  </image>
+</annotations>

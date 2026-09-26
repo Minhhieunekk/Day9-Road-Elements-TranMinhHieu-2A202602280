@@ -1,8 +1,8 @@
 CVAT task reference — thay mọi placeholder mới là xong.
 
-CVAT version: TODO
+CVAT version: 2.74.1 (http://localhost:8080)
 Task calibration (tên, id): TODO
 Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: TODO
-File export đã nộp (đường dẫn trong repo): TODO
+File export đã nộp (đường dẫn trong repo): project/cvat_annotations/ground_truth_12/ground_truth_12_cvat_for_images_1.1.zip (ground truth 12 ảnh, CVAT for images 1.1); export calibration trong project/06_calibration_exports/; export peer trong project/07_blind_handoff/peer_output/
 Guideline version dán trong Guide của task: TODO
-Ghi chú cho người tiếp nhận: TODO
+Ghi chú cho người tiếp nhận: Labels = project/03_cvat_labels.json (một label traffic_sign, 11 attribute). Ảnh trao đổi = project/dataraw/traffic_sign_gt/ (12 ảnh). Tạo task với Sorting method = lexicographical rồi Upload annotations format CVAT 1.1. Chấm export của peer: python project/check_peer_accuracy.py <export>.zip (thêm --only-split blind để chỉ chấm 5 ảnh blind).

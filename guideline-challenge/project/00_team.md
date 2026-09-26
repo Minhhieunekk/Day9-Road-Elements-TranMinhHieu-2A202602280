@@ -5,12 +5,12 @@
 - **Team:** TODO (ví dụ `team07`)
 - **Nhóm peer test bài của mình:** TODO (cặp A ↔ B; số nhóm lẻ thì ring 3 nhóm A → B → C → A — Lab Coach công bố)
 - **Nhóm mình test bài của:** TODO
-- **Problem family:** TODO (xem README mục "1 · Chọn bài toán")
-- **Nguồn ảnh:** TODO (`bdd100k`, `gtsdb`, `lisa` — chỉ dùng ảnh trong `data/`)
+- **Problem family:** Traffic sign taxonomy — hierarchical sign taxonomy theo nhóm chức năng pháp lý cho biển nhỏ / xa / bị che
+- **Nguồn ảnh:** `gtsdb` (6 ảnh) + `bdd100k` (6 ảnh) — bộ trao đổi 12 ảnh trong `project/dataraw/traffic_sign_gt/`
 
 | Thành viên | GitHub | Vai trò chính | File phụ trách |
 |---|---|---|---|
-| TODO | TODO | TODO | TODO |
+| TODO | hieunekkkkkk | TODO | TODO |
 
 Gợi ý chia vai (nhóm 2–3 người thì gộp): **spec owner** (`01`, `02`), **CVAT owner** (`03_*`, `sample_pack.csv`,
 `09`), **gold owner** (`04_edge_cases/`), **QA owner** (`05`, `06`, `07_blind_handoff/`). Mỗi file một người sửa
